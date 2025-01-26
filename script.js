@@ -101,7 +101,8 @@ const renderItemBackground = (item) => {
   container.className = "room-prices__item-background"
   container.innerHTML = `
     <div class="room-prices__item-background">
-      <div class="room-prices__item-background-cover ${item.isReserved ? "room-prices__item-background-cover--reserved" : ""}"></div>
+      ${item.isReserved ? `<div class="room-prices__item-background-cover room-prices__item-background-cover--reserved"></div>` : ``}
+      <div class="room-prices__item-background-cover"></div>
       <img class="room-prices__item-background-image" src="${item.image}" alt="${item.title}" >
     </div>`
   return container

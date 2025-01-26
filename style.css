@@ -229,11 +229,7 @@ button{
 .room-prices__item-content-price-paragraph{
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   color: var(--primary-2);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
 }
 
 .room-prices__item-content-price-paragraph-day{
@@ -380,7 +376,7 @@ button{
   .room-prices__item-content-price{
     display: block;
     height: 131px;
-    padding-top: 18px;
+    padding: 18px 21px 0;
   }
 
   .room-prices__item-content-price-paragraph-day{
@@ -406,5 +402,9 @@ button{
   .room-prices__item-content-price-button-text{
     font-size: 14px;
     line-height: 24px;
+  }
+
+  .room-prices__item-content-price-button{
+    height: 42px;
   }
 }
