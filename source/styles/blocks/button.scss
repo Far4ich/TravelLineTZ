@@ -1,0 +1,44 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: none;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 16px;
+
+    border-radius: 5px;
+  }
+}
+
+.button--primary {
+  color: $neutral-secondary-color;
+
+  background-color: $primary-1-color;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $primary-3-color;
+    box-shadow: 0 4px 4px 0 $button-shadow-color;
+  }
+
+  &:active {
+    color: $button-active-text-color;
+
+    background-color: $primary-3-color;
+    box-shadow: none;
+  }
+}

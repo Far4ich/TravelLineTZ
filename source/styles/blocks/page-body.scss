@@ -1,0 +1,43 @@
+.page__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  background-image: url("../../images/page-background.svg");
+  background-attachment: fixed;
+  background-size: 1920px 938px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    @include pseudo-element(100%, 100vh);
+
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+    background: $page-gradient;
+  }
+
+  @media (min-width: $tablet-screen) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .catalog {
+    margin-top: 24px;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-screen) {
+      margin-top: 27px;
+    }
+  }
+}
