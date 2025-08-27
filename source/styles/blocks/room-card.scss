@@ -1,0 +1,351 @@
+.room-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  max-width: 288px;
+  width: 100%;
+  min-height: 347px;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  border-radius: 13px;
+
+  &::after {
+    @include pseudo-element(100%, 100%);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: $catalog-item-background-color;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 15px 0 $catalog-item-shadow-color;
+  }
+
+  @media (min-width: $tablet-screen) {
+    max-width: 336px;
+    min-height: 420px;
+
+    border-radius: 10px;
+  }
+
+  @media (min-width: $desktop-screen) {
+    max-width: 372px;
+    min-height: 372px;
+  }
+}
+
+.room-card__best-price {
+  position: absolute;
+  left: 21px;
+  top: 21px;
+  z-index: 1;
+
+  display: none;
+  justify-self: start;
+  height: max-content;
+  max-width: max-content;
+  margin: 0;
+  padding: 4px 4px 5px 16px;
+
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $neutral-secondary-color;
+
+  background-color: $accent-color;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+
+  &::after {
+    @include pseudo-element(36px, 30px);
+    position: absolute;
+    top: 0;
+    right: -36px;
+
+    mask-image: url("../../icons/stack.svg#best-price-ticket");
+    background-color: $accent-color;
+  }
+
+  @media (min-width: $tablet-screen) {
+    left: 24px;
+    top: 24px;
+  }
+}
+
+
+.room-card--best-price:hover .room-card__best-price {
+  display: flex;
+}
+
+.room-card--reserved {
+  cursor: pointer;
+
+  .room-card__best-price {
+    display: none;
+  }
+
+  .room-card__title {
+    pointer-events: none;
+  }
+
+  &:hover {
+    .room-card__best-price {
+      display: none;
+    }
+  }
+
+  .room-card__reserved-container {
+    display: flex;
+  }
+}
+
+.room-card--reserved .room-card__text-container {
+  &::before {
+    @include pseudo-element(100%, 100%);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: $neutral-secondary-color;
+    opacity: 0.4;
+  }
+}
+
+.room-card__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  max-height: 347px;
+
+  &::before {
+    @include pseudo-element(100%, 100%);
+
+    position: absolute;
+
+    background: $catalog-item-gradient;
+  }
+
+  @media (min-width: $tablet-screen) {
+    max-height: 420px;
+  }
+
+  @media (min-width: $desktop-screen) {
+    max-height: 372px;
+  }
+}
+
+.room-card__text-container {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  padding: 61px 21px 21px;
+
+  color: $neutral-secondary-color;
+
+  @media (min-width: $tablet-screen) {
+    padding: 64px 24px 22px;
+  }
+}
+
+.room-card__title {
+  margin: 0;
+
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $neutral-secondary-color;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.room-card__link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    .room-card__title {
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      text-decoration-skip-ink: none;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+
+    .room-card__title {
+      text-decoration: none;
+    }
+  }
+}
+
+.room-card__description {
+  margin: 10px 0 0;
+
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.room-card__reserving-container {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0 21px 21px;
+
+  color: $neutral-secondary-color;
+
+  &::before {
+    @include pseudo-element(calc(100% - 42px), 1px);
+
+    position: absolute;
+    top: 0;
+
+    background-color: $neutral-secondary-color;
+    opacity: 0.2;
+  }
+
+  @media (min-width: $tablet-screen) {
+    padding: 0 24px 24px;
+
+    &::before {
+      width: calc(100% - 48px);
+    }
+  }
+
+  @media (min-width: $desktop-screen) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 27px;
+    padding-bottom: 22px;
+  }
+}
+
+.room-card__price {
+  margin: 18px 0 0;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-screen) {
+    margin-top: 17px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.room-card__price-from {
+  font-family: $secondary-font;
+  font-size: 17px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 19px;
+  }
+}
+
+.room-card__price-number {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  color: $primary-2-color;
+
+  @media (min-width: $tablet-screen) {
+    margin-left: 3px;
+
+    font-size: 24px;
+  }
+}
+
+.room-card__price-currency {
+  display: inline-block;
+  margin: 0 0 -2px 4px;
+
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+
+  opacity: 0.6;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 23px;
+  }
+}
+
+.room-card__button {
+  width: 100%;
+  height: max-content;
+  margin-top: 16px;
+  padding: 8px 0 10px;
+
+  @media (min-width: $tablet-screen) {
+    padding: 11px 0 13px;
+  }
+
+  @media (min-width: $desktop-screen) {
+    max-width: 180;
+    margin-top: 23px;
+    padding: 11px 24px 13px 25px;
+  }
+}
+
+.room-card__reserved-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 25px 21px 29px;
+
+  background-color: $secondary-color;
+}
+
+.room-card__reserved-text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: $neutral-secondary-color;
+  letter-spacing: 0;
+}
+
+.room-card__reserved-link {
+  font-weight: 600;
+}

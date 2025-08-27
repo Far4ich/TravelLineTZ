@@ -3,22 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>TZ</title>
+  <title>Номера и цены</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <section class="catalog">
+  <section class="catalog page__section">
     <h1 class="catalog__title">Номера и цены</h1>
 
     <ul class="catalog__list">
-      <li class="catalog__item">
-        <picture class="catalog__item-picture">
+      <li class="room-card">
+        <picture class="room-card__picture">
           <source width="372" height="372" type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-1-desktop@1x.webp 1x, images/catalog-1-desktop@2x.webp 2x">
           <source width="336" height="420" type="image/webp" media="(min-width: 768px)" srcset="images/catalog-1-tablet@1x.webp 1x, images/catalog-1-tablet@2x.webp 2x">
           <source width="288" height="347" type="image/webp" srcset="images/catalog-1-mobile@1x.webp 1x, images/catalog-1-mobile@2x.webp 2x">
@@ -27,29 +24,28 @@
           <img src="images/catalog-1-mobile@1x.png" srcset="images/catalog-1-mobile@2x.png 2x" width="288" height="347" alt="Светлый номер отеля с аккуратной двуспальной кроватью, украшенной постельным бельем с оранжевым узором. Солнечный свет проникает сквозь большие окна, освещая небольшой письменный стол и стул.">
         </picture>
 
-        <div class="catalog__item-text-container">
-          <p class="catalog__item-best-price">Гарантия лучшей цены!</p>
-          <a class="catalog__item-title" href="#">
-            <h3 class="catalog__item-title-text">Представительский люкс</h3>
+        <div class="room-card__text-container">
+          <a class="room-card__link" href="#">
+            <h2 class="room-card__title">Представительский люкс</h2>
           </a>
-          <p class="catalog__item-description">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
+          <p class="room-card__description">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
         </div>
 
-        <div class="catalog__item-reserving-container">
-          <p class="catalog__item-price">Цена за сутки<br><span class="catalog__item-price-from">от</span> <span class="catalog__item-price-number">7 900</span> <span class="catalog__item-price-currency">₽</span>
+        <div class="room-card__reserving-container">
+          <div class="room-card__reserved-container">
+            <p class="room-card__reserved-text">Номер зарезервирован<br>
+              Перейти к <a class="room-card__reserved-link link" href="#">оплате</a></p>
+          </div>
+
+          <p class="room-card__price">Цена за сутки<br><span class="room-card__price-from">от</span> <span class="room-card__price-number">7 900</span> <span class="room-card__price-currency">₽</span>
           </p>
 
-          <button class="catalog__item-button button button--primary" type="button">Забронировать</button>
-        </div>
-
-        <div class="catalog__item-reserved-container">
-          <p class="catalog__item-reserved-text">Номер зарезервирован<br>
-            Перейти к <a class="catalog__item-reserved-text-link" href="#">оплате</a></p>
+          <button class="room-card__button button button--primary" type="button">Забронировать</button>
         </div>
       </li>
 
-      <li class="catalog__item catalog__item--best-price">
-        <picture class="catalog__item-picture">
+      <li class="room-card room-card--best-price">
+        <picture class="room-card__picture">
           <source width="372" height="372" type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-2-desktop@1x.webp 1x, images/catalog-2-desktop@2x.webp 2x">
           <source width="336" height="420" type="image/webp" media="(min-width: 768px)" srcset="images/catalog-2-tablet@1x.webp 1x, images/catalog-2-tablet@2x.webp 2x">
           <source width="288" height="347" type="image/webp" srcset="images/catalog-2-mobile@1x.webp 1x, images/catalog-2-mobile@2x.webp 2x">
@@ -58,29 +54,29 @@
           <img src="images/catalog-2-mobile@1x.png" srcset="images/catalog-2-mobile@2x.png 2x" width="288" height="347" alt="В уютном гостиничном номере есть большая кровать с белым постельным бельем, письменный стол с двумя лампами и оранжевый стул. Из окна открывается вид на яркий городской пейзаж в сумерках.">
         </picture>
 
-        <div class="catalog__item-text-container">
-          <p class="catalog__item-best-price">Гарантия лучшей цены!</p>
-          <a class="catalog__item-title" href="#">
-            <h3 class="catalog__item-title-text">Дуплекс</h3>
+        <div class="room-card__text-container">
+          <p class="room-card__best-price">Гарантия лучшей цены!</p>
+          <a class="room-card__link" href="#">
+            <h2 class="room-card__title">Дуплекс</h2>
           </a>
-          <p class="catalog__item-description">Просторный двухкомнатный номер с шикарным видом на парк</p>
+          <p class="room-card__description">Просторный двухкомнатный номер с шикарным видом на парк</p>
         </div>
 
-        <div class="catalog__item-reserving-container">
-          <p class="catalog__item-price">Цена за сутки<br><span class="catalog__item-price-from">от</span> <span class="catalog__item-price-number">5 700</span> <span class="catalog__item-price-currency">₽</span>
+        <div class="room-card__reserving-container">
+          <div class="room-card__reserved-container">
+            <p class="room-card__reserved-text">Номер зарезервирован<br>
+              Перейти к <a class="room-card__reserved-link link" href="#">оплате</a></p>
+          </div>
+
+          <p class="room-card__price">Цена за сутки<br><span class="room-card__price-from">от</span> <span class="room-card__price-number">5 700</span> <span class="room-card__price-currency">₽</span>
           </p>
 
-          <button class="catalog__item-button button button--primary" type="button">Забронировать</button>
-        </div>
-
-        <div class="catalog__item-reserved-container">
-          <p class="catalog__item-reserved-text">Номер зарезервирован<br>
-            Перейти к <a class="catalog__item-reserved-text-link" href="#">оплате</a></p>
+          <button class="room-card__button button button--primary" type="button">Забронировать</button>
         </div>
       </li>
 
-      <li class="catalog__item">
-        <picture class="catalog__item-picture">
+      <li class="room-card">
+        <picture class="room-card__picture">
           <source width="372" height="372" type="image/webp" media="(min-width: 1280px)" srcset="images/catalog-3-desktop@1x.webp 1x, images/catalog-3-desktop@2x.webp 2x">
           <source width="336" height="420" type="image/webp" media="(min-width: 768px)" srcset="images/catalog-3-tablet@1x.webp 1x, images/catalog-3-tablet@2x.webp 2x">
           <source width="288" height="347" type="image/webp" srcset="images/catalog-3-mobile@1x.webp 1x, images/catalog-3-mobile@2x.webp 2x">
@@ -89,24 +85,23 @@
           <img src="images/catalog-3-mobile@1x.png" srcset="images/catalog-3-mobile@2x.png 2x" width="288" height="347" alt="Современный номер отеля с большой кроватью и подушками. Яркое цветочное панно над кроватью в оранжево-белых тонах создаёт уютную и гостеприимную атмосферу.">
         </picture>
 
-        <div class="catalog__item-text-container">
-          <p class="catalog__item-best-price">Гарантия лучшей цены!</p>
-          <a class="catalog__item-title" href="#">
-            <h3 class="catalog__item-title-text">Бизнес-люкс</h3>
+        <div class="room-card__text-container">
+          <a class="room-card__link" href="#">
+            <h2 class="room-card__title">Бизнес-люкс</h2>
           </a>
-          <p class="catalog__item-description">Трёхкомнатный номер с панорамным видом на Москва&#8209;реку</p>
+          <p class="room-card__description">Трёхкомнатный номер с панорамным видом на Москва&#8209;реку</p>
         </div>
 
-        <div class="catalog__item-reserving-container">
-          <p class="catalog__item-price">Цена за сутки<br><span class="catalog__item-price-from">от</span> <span class="catalog__item-price-number">4 900</span> <span class="catalog__item-price-currency">₽</span>
+        <div class="room-card__reserving-container">
+          <div class="room-card__reserved-container">
+            <p class="room-card__reserved-text">Номер зарезервирован<br>
+              Перейти к <a class="room-card__reserved-link link" href="#">оплате</a></p>
+          </div>
+
+          <p class="room-card__price">Цена за сутки<br><span class="room-card__price-from">от</span> <span class="room-card__price-number">4 900</span> <span class="room-card__price-currency">₽</span>
           </p>
 
-          <button class="catalog__item-button button button--primary" type="button">Забронировать</button>
-        </div>
-
-        <div class="catalog__item-reserved-container">
-          <p class="catalog__item-reserved-text">Номер зарезервирован<br>
-            Перейти к <a class="catalog__item-reserved-text-link" href="#">оплате</a></p>
+          <button class="room-card__button button button--primary" type="button">Забронировать</button>
         </div>
       </li>
     </ul>

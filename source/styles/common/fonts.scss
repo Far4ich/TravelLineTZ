@@ -1,0 +1,19 @@
+$primary-font: "Open Sans", arial, sans-serif;
+$secondary-font: "Roboto", arial, sans-serif;
+
+@mixin font-face($font-family, $font-weight, $font-style, $font-src...) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+@include font-face("Open Sans", 400, normal, url("../../fonts/open-sans/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/open-sans/OpenSans-Regular.woff") format("woff"));
+@include font-face("Open Sans", 600, normal, url("../../fonts/open-sans/OpenSans-SemiBold.woff2") format("woff2"), url("../../fonts/open-sans/OpenSans-SemiBold.woff") format("woff"));
+@include font-face("Open Sans", 700, normal, url("../../fonts/open-sans/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/open-sans/OpenSans-Bold.woff") format("woff"));
+@include font-face("Roboto", 400, normal, url("../../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Regular.woff") format("woff"));
+@include font-face("Roboto", 500, normal, url("../../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Medium.woff") format("woff"));
+@include font-face("Roboto", 700, normal, url("../../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Bold.woff") format("woff"));
