@@ -326,7 +326,6 @@
 
   display: none;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -337,7 +336,7 @@
 }
 
 .room-card__reserved-text {
-  margin: 0;
+  margin: auto;
 
   font-size: 14px;
   line-height: 21px;
